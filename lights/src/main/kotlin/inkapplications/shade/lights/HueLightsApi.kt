@@ -155,17 +155,17 @@ internal interface HueLightsApi {
  */
 @JsonClass(generateAdapter = true)
 data class Light(
-    val state: LightState,
-    @Json(name = "swupdate") val updateState: UpdateState,
-    val type: String,
-    val name: String,
-    @Json(name = "modelid") val modelId: String,
-    @Json(name = "manufacturername") val manufacturer: String,
-    @Json(name = "productname") val productName: String,
-    val capabilities: Capabilities,
-    val config: LightConfig,
-    @Json(name = "uniqueid") val uuid: String,
-    @Json(name = "swversion") val softwareVersion: String
+    val state: LightState?,
+    @Json(name = "swupdate") val updateState: UpdateState?,
+    val type: String?,
+    val name: String?,
+    @Json(name = "modelid") val modelId: String?,
+    @Json(name = "manufacturername") val manufacturer: String?,
+    @Json(name = "productname") val productName: String?,
+    val capabilities: Capabilities?,
+    val config: LightConfig?,
+    @Json(name = "uniqueid") val uuid: String?,
+    @Json(name = "swversion") val softwareVersion: String?
 )
 
 /**

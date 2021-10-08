@@ -12,7 +12,7 @@ buildscript {
 
 subprojects {
     group = "com.inkapplications.shade"
-    version = if (version != "unspecified") version else "1.0-SNAPSHOT"
+    version = if (version != "unspecified") version else "1.2.0.2-SNAPSHOT"
     
     repositories {
         jcenter()
