@@ -2,11 +2,11 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath(kotlin("gradle-plugin", version = "1.4.20"))
-        classpath(atomicFU("gradle-plugin"))
+        classpath(atomicFU("atomicfu-gradle-plugin"))
     }
 }
 
@@ -15,7 +15,7 @@ subprojects {
     version = if (version != "unspecified") version else "1.0-SNAPSHOT"
     
     repositories {
-        jcenter()
+        mavenCentral()
     }
     tasks.withType(Test::class) {
         testLogging.exceptionFormat = TestExceptionFormat.FULL
