@@ -15,7 +15,7 @@ class DiscoverModule {
         return Retrofit.Builder()
             .client(client)
             .baseUrl(apiUrl)
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(MoshiConverterFactory.create().asLenient())
             .build()
             .create(BridgeDiscovery::class.java)
     }

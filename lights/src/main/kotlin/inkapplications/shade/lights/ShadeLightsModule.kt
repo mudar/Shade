@@ -45,7 +45,7 @@ class ShadeLightsModule {
             .baseUrl(baseUrl)
             .addConverterFactory(UnitConverterFactory)
             .addConverterFactory(FirstInCollectionConverterFactory)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
             .build()
         val api = retrofit.create(HueLightsApi::class.java)
 

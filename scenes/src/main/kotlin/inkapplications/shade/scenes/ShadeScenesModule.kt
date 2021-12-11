@@ -36,7 +36,7 @@ class ShadeScenesModule {
         val retrofit = Retrofit.Builder()
             .client(client)
             .baseUrl(baseUrl)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
             .build()
         val api = retrofit.create(HueScenesApi::class.java)
 
